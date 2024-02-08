@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required, permission_required, 
 from django.contrib.auth import login, logout, authenticate
 
 
+@login_required(login_url='/login')
 def home(request):
     return render(request, "main/home.html")
 
